@@ -39,8 +39,3 @@ export async function fetchPhotosByAlbum(albumId: number): Promise<Photo[]> {
     url: `https://picsum.photos/seed/${photo.id}/600/600`,
   }));
 }
-
-export async function fetchAllPhotos(): Promise<Photo[]> {
-  const { data } = await apiClient.get<Photo[]>("/photos");
-  return data;
-}
