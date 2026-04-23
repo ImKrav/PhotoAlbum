@@ -11,7 +11,7 @@ export type Photo = {
   thumbnailUrl: string;
 };
 
-const API_BASE_URL = "/api";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 export async function fetchAlbums(): Promise<Album[]> {
   const response = await fetch(`${API_BASE_URL}/albums`);
